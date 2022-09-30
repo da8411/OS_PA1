@@ -52,6 +52,9 @@ int run_command(int nr_tokens, char * const tokens[])
 
 	fprintf(stderr, "Unable to execute %s\n", tokens[0]);
 	return -EINVAL;
+
+	//successful command execution
+	return 1;
 }
 
 
