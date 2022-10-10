@@ -159,7 +159,7 @@ Let's build my awesome and powerful shell with those system calls.
 
 #### Terminate timed-out program (100 pts)
 
-- Let the shell detect non-finishing programs in an infinite loop and terminiate them. Let the `timeout` built-in command set the desired time out specified in seconds (2 by default) or print out the current time-out value. When the executing program does not finish within the specified period, `mash` should terminate the program by sending a `SIGKILL` signal to it. When the timeout is set to 0, disable this timed-out feature.
+- Let the shell detect non-finishing programs in an infinite loop and terminiate them. Let the `timeout` built-in command set the desired time out specified in seconds (2 by default) or print out the current time-out value. When the executing program does not finish within the specified period, `mash` should terminate the program by sending a `SIGKILL` signal to it. When the timeout is set to 0, disable this timed-out feature. Make sure that the messages are written to `stderr` with `fprintf`.
 - ```
   $ timeout
   Current timeout is 0 second
@@ -202,7 +202,7 @@ Let's build my awesome and powerful shell with those system calls.
   argv[1] = zzz
   argv[2] = 10
   ...
-  ( ... after 10 seconds ...)
+  ( ... after 5 seconds ...)
   ./toy is timed out
   $
   ```

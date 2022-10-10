@@ -1,5 +1,5 @@
 /**********************************************************************
- * Copyright (c) 2020
+ * Copyright (c) 2020-2022
  *  Sang-Hoon Kim <sanghoonkim@ajou.ac.kr>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -33,7 +33,7 @@ int main(int argc, const char *argv[])
 	}
 
 	if (argc >= 3 && strncmp(argv[1], "zzz", strlen("zzz")) == 0) {
-		int sleep_sec = sleep_sec = atoi(argv[2]);
+		int sleep_sec = atoi(argv[2]);
 		sleep(sleep_sec);
 	}
 
