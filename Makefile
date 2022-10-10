@@ -31,13 +31,9 @@ test-cd: $(TARGET) testcases/test-cd
 test-history: $(TARGET) testcases/test-history
 	./$< -q < testcases/test-history
 
-.PHONY: test-pipe
-test-pipe: $(TARGET) testcases/test-pipe
-	./$< -q < testcases/test-pipe
+.PHONY: test-timeout
+test-timeout: $(TARGET) testcases/test-timeout
+	./$< -q < testcases/test-timeout
 
-test-all: test-run test-cd test-history test-pipe
+test-all: test-run test-cd test-history test-timeout
 	echo
-
-.PHONY: sol
-sol: pa1-sol.c parser.c
-	gcc -o pa1 $^
